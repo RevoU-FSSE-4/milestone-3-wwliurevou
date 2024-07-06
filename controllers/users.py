@@ -53,6 +53,7 @@ def register_user():
 def get_current_user():
     Session = sessionmaker(engine)
     s = Session()
+    s.begin()
     # with Session() as s:
     try:
         # Logic Apps
